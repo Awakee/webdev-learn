@@ -3,43 +3,43 @@ uses crt;
 const N = 10;
 var
   a: array [1..N] of integer;
-  k: integer;
+  searchNumber: integer;
   isFound: boolean;
   i: integer;
 begin
   randomize;
 
-  for i := 1 to N do 
+for i := 1 to N do 
   begin
     a[i] := Random(15);
   end;
   
-  writeln('Filled random array: ');
-  for i := 1 to N do
+writeln('Filled random array: ');
+for i := 1 to N do
   begin
     write(a[i], ' ');
   end;  
   
-  writeln;  
+writeln;  
  
-  k := Random(15);
+searchNumber := Random(15);
  
-  IsFound := False;
-  for i:=1 to N do
+isFound := False;
+for i := 1 to N do
   begin
-    if a[i] = k then 
-    begin
-      IsFound := True;
-      break;
-    end;
+    if a[i] = searchNumber then 
+      begin
+        IsFound := True;
+        break;
+      end;
   end;
  
-  if IsFound then
+if isFound then
   begin
-    writeln('Element ', k, ' is found!');
+    writeln('Element ', searchNumber, ' is found!');
   end  
-  else
+else
   begin
-    writeln('Element ', k, ' not found');
+    writeln('Element ', searchNumber, ' not found');
   end;  
 end.
