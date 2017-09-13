@@ -3,23 +3,34 @@ var searchNumber;
 var i;
 var massive = [];
 var isFound = false;
+var checkNumber = false;
 
-for(i = 1; i <= 15; i++){
+for(i = 1; i <= 15; i++) {
   var rndNumber = Math.floor(Math.random()  * (16-1)) + 1;
-  massive[i]=rndNumber;
+  massive[i] = rndNumber;
 }
 
-var enterNumber = prompt("Введите число для поиска в массиве");
-alert("Введеное число:" + enterNumber);
+do {
+  var enterNumber = prompt("Введите число для поиска в массиве");
+  if(isNaN (enterNumber)) {
+    alert("Ошибка, повторите ввод");
+  } else {
+    checkNumber = true;
+  }
+}while(checkNumber != true);
 
-for(i = 1; i <= 15; i++){
-  if(massive[i]==enterNumber){
+alert("Введеное число: " + enterNumber);
+
+
+
+for(i = 1; i <= 15; i++) {
+  if(massive[i] == enterNumber) {
     isFound = true;
     break;
   }
 }
 
-if(isFound){
+if(isFound) {
   alert("Число найдено");
 } else {
   alert("Число не найдено");
