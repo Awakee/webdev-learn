@@ -25,6 +25,7 @@ do {
 
 alert("Введеное число: " + enterNumber);
 
+/*
 for(i = 1; i <= 15; i++) {
   if(massive[i] == enterNumber) {
     isFound = true;
@@ -36,4 +37,15 @@ if(isFound) {
   alert("Число найдено");
 } else {
   alert("Число не найдено");
+}
+*/
+
+var searchElement = massive.filter(function(number) {
+  return number == enterNumber;
+});
+
+if (searchElement == false) {
+  alert("Элемент не найден");
+} else {
+  alert("Элемент найден. " + searchElement);
 }
