@@ -10,6 +10,10 @@ for(i = 1; i <= 15; i++) {
   massive[i] = rndNumber;
 }
 
+alert("Вывод массива без использования цикла.");
+var demoShowMassive = massive.slice(1,16);
+alert(demoShowMassive);
+
 do {
   var enterNumber = prompt("Введите число для поиска в массиве");
   if(isNaN (enterNumber)) {
@@ -20,8 +24,6 @@ do {
 }while(checkNumber != true);
 
 alert("Введеное число: " + enterNumber);
-
-
 
 for(i = 1; i <= 15; i++) {
   if(massive[i] == enterNumber) {
