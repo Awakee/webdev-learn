@@ -1,46 +1,33 @@
 "use strict"
 var searchNumber;
 var i;
-var massive = [];
+var arrNumbers = [];
 var isFound = false;
-var checkNumber = false;
 
 for(i = 1; i <= 15; i++) {
   var rndNumber = Math.floor(Math.random()  * (16-1)) + 1;
-  massive[i] = rndNumber;
+  arrNumbers[i] = rndNumber;
 }
 
 alert("Вывод массива без использования цикла.");
-var demoShowMassive = massive.slice(1,16);
-alert(demoShowMassive);
+var demoShowarrNumbers = arrNumbers.slice(1,16);
+alert(demoShowarrNumbers);
 
-do {
-  var enterNumber = prompt("Введите число для поиска в массиве");
-  if(isNaN (enterNumber)) {
-    alert("Ошибка, повторите ввод");
-  } else {
-    checkNumber = true;
-  }
-}while(checkNumber != true);
+var enterNumber = prompt("Введите число для поиска в массиве");
+
+if(isNaN(enterNumber)) {
+  alert("Ошибка, повторите ввод");
+  windows.stop()
+}
+
+if((enterNumber == "")) {
+  alert("Ошибка, заполните поле.");
+  windows.stop()
+}
 
 alert("Введеное число: " + enterNumber);
 
-/*
-for(i = 1; i <= 15; i++) {
-  if(massive[i] == enterNumber) {
-    isFound = true;
-    break;
-  }
-}
-
-if(isFound) {
-  alert("Число найдено");
-} else {
-  alert("Число не найдено");
-}
-*/
-
-var searchElement = massive.filter(function(number) {
+var searchElement = arrNumbers.filter(function(number) {
   return number == enterNumber;
 });
 
