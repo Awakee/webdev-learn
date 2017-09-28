@@ -1,4 +1,4 @@
-function validate(form){
+function registration(){
   var userEmail = $("#email").val();
   var userPass = $("#password").val();
   var userPassCheck = $("#passwordcheck").val();
@@ -15,7 +15,7 @@ function validate(form){
     windows.stop();
   }
 
-  if (!(userPass == userPassCheck)) {
+  if ((userPass != userPassCheck)) {
     alert("Пароли должны совпадать");
     windows.stop();
   }
@@ -26,6 +26,5 @@ function validate(form){
   }
 
   alert("Регистрация успешна");
-
 };
 

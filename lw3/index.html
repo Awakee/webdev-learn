@@ -1,15 +1,15 @@
 <!DOCTYPE HTML>
 <html>
-  <script src="js/scripts.js"></script>
-  <script src="js/jquery-3.2.1.min.js"></script>
-  <link rel="stylesheet" href="css/style.css">
   <head>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/registration.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
     <title>Registration</title>
     <body>
       <div class="container">
         <h1>Регистрация</h1>
         <div class="registration">
-        <form onsubmit="return validate(this)">
+        <form onsubmit="return registration(this)">
           <div class="input_texts">
             <input type="text" id="email" name="email" required placeholder="E-mail"/>
             <input type="password" id="password" name="password" required placeholder="Пароль"/>
