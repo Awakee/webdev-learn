@@ -14,7 +14,6 @@ body{
     height: 500px;
     margin: auto; 
     padding-top: 10%;
-    
 }
 
 .input_texts input{  
@@ -36,3 +35,30 @@ body{
     text-align: center;
 }
 
+.agreement{
+    padding-top: 15px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.agreement input{
+    height: 20px;
+    width: 20px;
+}
+
+.button_reg input{
+    margin-top: 10px;
+    background-color: #1abac9;
+    transition: background-color.8s ease;
+    font-size: 2em;
+    font-family: 'Pangolin', cursive;
+    height: 50px;
+    width: 400px;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid #1E82AD;
+}
+
+.button_reg input:hover{
+    background-color: #26ABE4;
+    transition: background-color.8s ease;
+}
