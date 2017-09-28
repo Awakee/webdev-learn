@@ -15,7 +15,7 @@ function registration(){
         windows.stop();
     }
 
-    if (!(userPass.value == userPassCheck.value)) {
+    if ((userPass.value != userPassCheck.value)) {
        alert("Пароли должны совпадать");
        windows.stop();
     }
