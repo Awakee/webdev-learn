@@ -1,4 +1,6 @@
-function registration(){
+$(document).ready(function(){
+$('#registration_form').submit(function registration_validate(){
+  event.preventDefault();
   var userEmail = $("#email").val();
   var userPass = $("#password").val();
   var userPassCheck = $("#passwordcheck").val();
@@ -26,5 +28,5 @@ function registration(){
   }
 
   alert("Регистрация успешна");
-};
-
+});
+});
