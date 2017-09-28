@@ -15,7 +15,7 @@ function validate(form){
     windows.stop();
   }
 
-  if (!(userPass = userPassCheck)) {
+  if (!(userPass == userPassCheck)) {
     alert("Пароли должны совпадать");
     windows.stop();
   }
@@ -24,4 +24,8 @@ function validate(form){
     alert("Вы должны принять пользовательское соглашение");
     windows.stop();
   }
+
+  alert("Регистрация успешна");
+
 };
+
