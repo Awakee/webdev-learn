@@ -1,25 +1,27 @@
 function validate(form){
-    var userEmail = document.getElementById('email');
-    var userPass = document.getElementById('password');
-    var userPassCheck = document.getElementById('password.check');
-    var userAgreement = document.getElementById('check.agreement');  
-    
-    var emailCheck = (/[^\s@]+@[^\s@]+\.[^\s@]+/.test(userEmail.value));
-    
+  var userEmail = $("#email").val();
+  var userPass = $("#password").val();
+  var userPassCheck = $("#passwordcheck").val();
+  var userAgreement = $("#checkagreement").prop("checked");
+  var emailCheck = (/[^\s@]+@[^\s@]+\.[^\s@]+/.test(userEmail));
 
-    if ((userEmail.value.length < 5) || (!emailCheck)) {
-        alert("Ошибка ввода Email.");
-    }
+  if ((userEmail.length < 5) || (!emailCheck)) {
+    alert("Ошибка ввода Email.");
+    windows.stop();
+  }
 
-    if ((userPass.value.length < 6) || (userPass = "") || (userPassCheck = "")) {
-        alert("Ошибка ввода пароля");
-    }
+  if ((userPass.length < 6) || (userPass == "") || (userPassCheck == "")) {
+    alert("Ошибка ввода пароля");
+    windows.stop();
+  }
 
-    if (!(userPass.value == userPassCheck.value)) {
-       alert("Пароли должны совпадать");
-    }
+  if (!(userPass = userPassCheck)) {
+    alert("Пароли должны совпадать");
+    windows.stop();
+  }
 
-    if (!userAgreement.checked){
-        alert("Вы должны принять пользовательское соглашение");
-    }
+  if (!userAgreement){
+    alert("Вы должны принять пользовательское соглашение");
+    windows.stop();
+  }
 };
