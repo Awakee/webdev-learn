@@ -1,5 +1,5 @@
 $(document).ready(function(){
-$('#registration_form').submit(function registration_validate(){
+  $('#registration_form').submit(function(event){
   event.preventDefault();
   var userEmail = $("#email").val();
   var userPass = $("#password").val();
@@ -9,24 +9,24 @@ $('#registration_form').submit(function registration_validate(){
 
   if ((userEmail.length < 5) || (!emailCheck)) {
     alert("Ошибка ввода Email.");
-    windows.stop();
+    return;
   }
 
   if ((userPass.length < 6) || (userPass == "") || (userPassCheck == "")) {
     alert("Ошибка ввода пароля");
-    windows.stop();
+    return;
   }
 
-  if ((userPass != userPassCheck)) {
+  if (userPass != userPassCheck) {
     alert("Пароли должны совпадать");
-    windows.stop();
+    return;
   }
 
   if (!userAgreement){
     alert("Вы должны принять пользовательское соглашение");
-    windows.stop();
+    return;
   }
 
   alert("Регистрация успешна");
-});
+  });
 });
